@@ -158,7 +158,7 @@
     <div class="fixed bottom-8 right-8 md:static w-48 md:w-full">
       <!-- TODO: Connect wallet -->
       <div
-        class="bg-spink hover:bg-spink/90 text-center w-full text-white rounded-full px-4 py-2 transition-all ease-in-out hover:duration-300"
+        class="bg-spink hover:bg-spink/90 text-center font-semibold w-full text-white rounded-full px-4 py-3 transition-all ease-in-out hover:duration-300"
       >
         Connect wallet
       </div>

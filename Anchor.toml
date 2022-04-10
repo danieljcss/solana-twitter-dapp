@@ -1,0 +1,14 @@
+[features]
+seeds = false
+[programs.localnet]
+solana_twitter = "7FHgrsjmeRzey47RTC3fy8pQzLkQ5Ci837husXZExa1V"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "/Users/daniecon/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"

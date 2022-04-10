@@ -3,6 +3,9 @@ const { defineConfig } = require('@vue/cli-service')
 
 module.exports = defineConfig({
   transpileDependencies: true,
+  chainWebpack: config => {
+    config.module.rules.delete("svg");
+  },
   configureWebpack: {
     plugins: [
       new webpack.ProvidePlugin({
@@ -19,6 +22,24 @@ module.exports = defineConfig({
         path: false,
         stream: false,
       }
-    }
+    },
+    module: {
+      rules: [
+        {
+          test: /\.svg$/,
+          use: [
+            'babel-loader',
+            'vue-svg-loader',
+          ],
+        },
+      ],
+    },
+  },
+  pages: {
+    index: {
+      // entry for the page
+      entry: 'src/main.js',
+      title: 'Solana Twitter',
+    },
   }
 })

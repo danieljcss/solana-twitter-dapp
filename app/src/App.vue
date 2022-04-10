@@ -1,26 +1,27 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+<script setup>
+import { useRoute } from "vue-router"
+import TheSidebar from "./components/TheSidebar"
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+const route = useRoute()
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<template>
+  <div class="w-full max-w-3xl lg:max-w-4xl mx-auto">
+    <!-- Sidebar. -->
+    <the-sidebar
+      class="py-4 md:py-8 md:pl-4 md:pr-8 fixed w-20 md:w-64"
+    ></the-sidebar>
+
+    <!-- Main -->
+    <main
+      class="flex-1 border-r border-l border-neutral-700 ml-20 md:ml-64 min-h-screen"
+    >
+      <header
+        class="flex space-x-6 items-center justify-between px-8 py-4 border-b border-b-neutral-700"
+      >
+        <div class="text-xl text-white font-bold" v-text="route.name"></div>
+      </header>
+      <router-view></router-view>
+    </main>
+  </div>
+</template>

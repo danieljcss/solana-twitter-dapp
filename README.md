@@ -7,8 +7,8 @@ In this project we create a version of Twitter that is hosted on the Solana netw
 - Solana CLI
 - Anchor: ^0.23.0
 - Node.js:
-- Vue.js
-- Tailwind
+- Vue.js: @vue/cli 5.0.0-rc.1
+- Tailwind: ^3.0.0
 
 ## Initialization
 

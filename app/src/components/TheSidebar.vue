@@ -8,7 +8,7 @@
       :to="{ name: 'Home' }"
       class="inline-block rounded-full hover:bg-neutral-800 p-3 md:self-start"
     >
-      <img src="@/assets/solitter-logo.png" class="h-8 md:h-10 w-8 md:w-10" />
+      <img src="@/assets/solitter-logo.png" class="w-8" />
     </router-link>
     <div class="flex flex-col items-center md:items-stretch space-y-2">
       <router-link

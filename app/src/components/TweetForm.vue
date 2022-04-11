@@ -6,6 +6,7 @@ import {
   useSlug,
 } from "@/composables"
 import { sendTweet } from "@/api"
+import { useWallet } from "solana-wallets-vue"
 
 // Props.
 const props = defineProps({
@@ -31,8 +32,8 @@ const characterLimitColour = computed(() => {
   return "text-gray-400"
 })
 
-// Permissions.
-const connected = ref(true) // TODO: Check connected wallet.
+// Permissions
+const { connected } = useWallet()
 const canTweet = computed(() => content.value && characterLimit.value > 0)
 
 // Actions.
